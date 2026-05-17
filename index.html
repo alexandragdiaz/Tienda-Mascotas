@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetStore - Tienda para Mascotas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="./icons/icon.png" type="image/png" />
+
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-paw"></i>
+                <h1>PetStore</h1>
+            </div>
+            
+            <nav class="nav">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-icons">
+                <i class="fas fa-search search-icon"></i>
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+                <div class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Todo para tu mascota <span class="highlight">en un solo lugar</span></h2>
+                <p>Alimentos, juguetes, accesorios y mucho más con los mejores precios</p>
+                <a href="#productos" class="btn btn-primary">Ver Productos</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="products" id="productos">
+        <div class="container">
+            <h2 class="section-title">Productos Destacados</h2>
+            
+            <div class="product-grid">
+                <!-- Producto 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./assets/images/p2.jpg" alt="Alimento para Perros">
+                        <span class="badge">Oferta</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Hoodie Pink</h3>
+                        <p class="category">Outfit</p>
+                        <div class="price">
+                            <span class="current-price">$45.990</span>
+                            <span class="old-price">$70.990</span>
+                        </div>
+                        <button class="btn btn-add" onclick="addToCart(1)">
+                            <i class="fas fa-cart-plus"></i> Agregar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/5.jpg" alt="Juguete para Gatos">
+                    </div>
+                    <div class="product-info">
+                        <h3>Hoodie Rousse</h3>
+                        <p class="category">Outfit</p>
+                        <div class="price">
+                            <span class="current-price">$65.500</span>
+                            <span class="old-price">$50.900</span>
+                        </div>
+                        <button class="btn btn-add" onclick="addToCart(2)">
+                            <i class="fas fa-cart-plus"></i> Agregar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/3.jpg" alt="Cama para Mascotas">
+                        <span class="badge new">Nuevo</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Hoodie Coofe</h3>
+                        <p class="category">Outfit</p>
+                        <div class="price">
+                            <span class="current-price">$89.990</span>
+                            <span class="old-price">$60.900</span>
+                        </div>
+                        <button class="btn btn-add" onclick="addToCart(3)">
+                            <i class="fas fa-cart-plus"></i> Agregar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/7.jpg" alt="Correa para Perros">
+                    </div>
+                    <div class="product-info">
+                        <h3>RGB Hoodie Elite</h3>
+                        <p class="category">Accesorios</p>
+                        <div class="price">
+                            <span class="current-price">$42.000</span>
+                            <span class="old-price">$60.900</span>
+                        </div>
+                        <button class="btn btn-add" onclick="addToCart(4)">
+                            <i class="fas fa-cart-plus"></i> Agregar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/8.jpg" alt="Cascos para Mascotas">
+                        <span class="badge">Oferta</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>CRGB Hoodie Fucsia</h3>
+                        <p class="category">Accesorios</p>
+                        <div class="price">
+                            <span class="current-price">$48.900</span>
+                            <span class="old-price">$60.900</span>
+                        </div>
+                        <button class="btn btn-add" onclick="addToCart(5)">
+                            <i class="fas fa-cart-plus"></i> Agregar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/1.jpg" alt="Rascador para Gatos">
+                    </div>
+                    <div class="product-info">
+                        <h3>RainbowFlow Outfit</h3>
+                        <p class="category">Juguetes</p>
+                        <div class="price">
+                            <span class="current-price">$125.000</span>
+                        </div>
+                        <button class="btn btn-add" onclick="addToCart(6)">
+                            <i class="fas fa-cart-plus"></i> Agregar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 7 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/2.jpg" alt="Shampoo para Mascotas">
+                        <span class="badge new">Nuevo</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Hoodie TempColor</h3>
+                        <p class="category">Outfit</p>
+                        <div class="price">
+                            <span class="current-price">$48.500</span>
+                        </div>
+                        <button class="btn btn-add" onclick="addToCart(7)">
+                            <i class="fas fa-cart-plus"></i> Agregar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 8 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/p3.jpg" alt="Comedero Automático">
+                    </div>
+                    <div class="product-info">
+                        <h3>Hoodie TempColor Blue</h3>
+                        <p class="category">Accesorios</p>
+                        <div class="price">
+                            <span class="current-price">$89.990</span>
+                        </div>
+                        <button class="btn btn-add" onclick="addToCart(8)">
+                            <i class="fas fa-cart-plus"></i> Agregar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 9 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/4.jpg" alt="Juguete Hueso Mordedor">
+                    </div>
+                    <div class="product-info">
+                        <h3>RainbowFlow Outfit Pink</h3>
+                        <p class="category">Outfit</p>
+                        <div class="price">
+                            <span class="current-price">$58.900</span>
+                        </div>
+                        <button class="btn btn-add" onclick="addToCart(9)">
+                            <i class="fas fa-cart-plus"></i> Agregar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <a href="https://wa.me/573000000000" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PetStore</h3>
+                    <p>Tu tienda confiable para todo lo que tu mascota necesita</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Itagüí, Antioquia</p>
+                    <p><i class="fas fa-phone"></i> +57 300 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@petstore.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PetStore. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
